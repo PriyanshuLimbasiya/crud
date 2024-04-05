@@ -1,0 +1,12 @@
+<form #myForm="ngForm" (ngSubmit)="submit(myForm.value)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" name='name' [(ngModel)]="data.name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Image</label>
+    <input type="text" name="avatar" class="form-control" [(ngModel)]="data.avatar" id="exampleInputPassword1">
+  </div>
+  <button *ngIf="idedit==0" type="submit" class="btn btn-primary">Submit</button>
+  <button *ngIf="idedit>0" type="submit" class="btn btn-primary">EDIT</button>
+</form>

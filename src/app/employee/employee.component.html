@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center align-items-center ">
+  <div class="btn btn-outline-primary my-2 w-50" routerLink="/employee/add">ADD Employee</div>
+</div>
+<div class="row">
+  <div class="col-md-3 card" style="width: 18rem;" *ngFor="let e of employee">
+    <img [src]="e.avatar" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{e.name}}</h5>
+      <div class="btn btn-outline-success me-2" routerLink="/employee/{{e.id}}">View</div>
+      <div class="btn btn-outline-danger" (click)="deleteemp(e.id)">Delete</div>
+    </div>
+  </div>
+</div>
